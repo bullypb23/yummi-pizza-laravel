@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::resource('pizzas', 'PizzaController')->except(['create', 'edit', 'update', 'destroy', 'show', 'store']);
+
+Route::post('orders', 'OrderController@store');

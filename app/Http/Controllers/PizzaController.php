@@ -14,7 +14,6 @@ class PizzaController extends Controller
      */
     public function index()
     {
-        $pizzas = Pizza::orderBy('id', 'asc')->get();
-        return response()->json($pizzas);
+        return response()->json(Pizza::orderBy('name', 'asc')->get());
     }
 }
